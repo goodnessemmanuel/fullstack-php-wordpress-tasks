@@ -252,12 +252,11 @@
                     
                     <input type="submit" value="Add Member"/>
                 </div>
-                
-                <div class="right">
-                    <button class="social-signin facebook">View Members</button>
-                </div>
-                <div class="or">OR</div>
             </form>
+            <div class="right">
+                <a href="database.json"><button class="social-signin facebook">View Members</button></a>
+             </div>
+            <div class="or">OR</div>
         </div>
     </main>
 </body>
