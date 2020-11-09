@@ -8,7 +8,7 @@ $success = '';
 
 if(isset($_FILES['photo'])) {
 
-    // tring  to upload a file
+    //string  to upload a file
     $name = $_FILES['photo']['name'];
     $type = $_FILES['photo']['type'];
 
