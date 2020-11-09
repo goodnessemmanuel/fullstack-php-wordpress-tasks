@@ -1,0 +1,205 @@
+@import url(https://fonts.googleapis.com/css?family=Lily+Script+One);
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+       box-sizing:border-box;
+}
+
+body {
+	margin:0;
+	font-family:arial,tahoma,sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	direction:ltr;
+    background:white;
+}
+
+.bucket{
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  height: 100vh;
+}
+
+.bucket > .header{
+    text-align: center;
+    margin: 20px auto;
+}
+
+.bucket > .form-area{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 50px auto;
+}
+
+.form-area > div{
+    width: 60%;
+}
+
+.form-area h2 {  
+    padding: 10px;
+    
+}
+
+.form-area form {   
+	padding:10px;
+    width:100%;
+	height:auto;
+	overflow:hidden;
+    display: flex;
+    
+}
+
+
+form input {
+    margin-left: 0;
+    margin-right: auto;
+	padding:15px 10px;
+	width:70%;
+	outline:none;
+	border:1px solid#1abc9c;
+    -webkit-transition:0.2s ease all;
+	   -moz-transition:0.2s ease all;
+	    -ms-transition:0.2s ease all;
+	     -o-transition:0.2s ease all;
+	        transition:0.2s ease all;
+}
+
+form button[type=submit], .modal-content > button {
+    margin-left: auto;
+    margin-right: 0;
+	padding:15px 50px;
+	background:#1abc9c;
+	border:none;
+	color:white;
+	cursor:pointer;
+	-webkit-transition:0.2s ease all;
+	   -moz-transition:0.2s ease all;
+	    -ms-transition:0.2s ease all;
+	     -o-transition:0.2s ease all;
+	        transition:0.2s ease all;
+}
+
+button[type=submit]:hover, .modal-content > button:hover{
+	opacity:0.8;
+}
+
+.bucket .gallery-area{
+    text-align: center;
+}
+
+#gallery{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: flex-start;
+    width: 100%;
+}
+
+#gallery > div{
+    width: 20vw;
+    height: auto;
+    max-height: 40vh; 
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#gallery > div > img{
+    width: inherit; 
+    cursor: pointer;
+}
+
+
+@media (max-width: 1000px) {
+    #gallery > div{
+        width: 25vw; 
+        margin: 15px;
+    }
+}
+@media (max-width: 800px) {
+    #gallery > div{
+        margin: 10px;
+        width: 30vw;
+    }
+    .form-area > div{
+        width: 90%;
+    }
+    
+}
+@media (max-width: 400px) {
+    #gallery > div{
+        margin: 5px;
+        width: 40vw; 
+    }
+
+    form{
+        display: block;
+    }
+    form > input{
+        width: 100%;
+    }
+}
+@media (max-width: 350px) {
+    .container{
+          padding: 5px;
+      }
+    #gallery > div{
+        display: block;
+        width: 80vw;
+        max-height: 80vh; 
+    }
+}
+
+ .modal-background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0s, opacity 0.5s;
+}
+
+.show-modal{
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-background > .modal-content{
+    position: relative;
+    width: 70%;
+    height: 70%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* opacity: 1; */
+}
+
+.modal-content > img{
+    width: 100%;
+    height: 100%;
+}
+.modal-content > button{
+    position: absolute;
+    padding: 0;
+    top: 10px;
+    right: 10px;
+    width: 18px;
+    height: 18px;
+    background: red;
+    color: black;
+    font-size: 14px;
+    font-weight: normal;
+}
