@@ -134,8 +134,7 @@
                     },
 
                     error: function(data){
-                        alert("Inside ajax error");
-                        //$(".form-response").html(data);
+                        $(".form-response").html(data);
                         $("#uploadForm").trigger("reset");
                     } 	        
                 });
