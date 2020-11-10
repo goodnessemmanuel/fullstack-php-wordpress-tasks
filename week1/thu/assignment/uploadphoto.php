@@ -18,17 +18,6 @@
             echo "maximum photo size allowed is 1MB";
         }
 
-        // Get Image Dimension
-        $fileinfo = @getimagesize($_FILES["imagefile"]["tmp_name"]);
-        $width = $fileinfo[0];
-        $height = $fileinfo[1];
-
-        if(width < 800 || height < 600){
-            $errorMsg = true;
-            echo "photo dimension must be atleast 800(width) by 600(height)";
-
-        }
-
         $uploadFolder = "img/"; 
 
         if(!$errorMsg && is_dir($uploadFolder)) 
