@@ -58,8 +58,7 @@
 
         <div class="form-area">
             <div>
-                <div class="form-response"></div>
-                <h2>Upload new photo</h2>
+                <h3>Upload new photo</h3>
                 <form id="uploadForm" action="uploadphoto.php" method="post" enctype="multipart/form-data">
                     <input type="file" name="imagefile" id="imagefile">
                     <button type="submit">Upload</button>
@@ -97,20 +96,21 @@
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script>
-        $(document).ready(function(){
+        $(document).ready(function() {
+
             //function close modal dialog when close button is clicked
             $(".close-modal").on("click", function(){
                 $(".modal-background").removeClass("show-modal");
             });
 
             //function open image in a modal dialog
-            $(".gallery-item > img").on("click", function() {
+            $("body").on("click", "#gallery img", function() {
                  let $thisSrc = $(this).attr("src");
 
                  $(".modal-content > img").attr('src', $thisSrc); 
                  
                  $(".modal-background").addClass("show-modal");
-
+ 
             });
 
             $("#uploadForm").on('submit', (function(e){
@@ -123,17 +123,21 @@
                     cache: false,
                     processData:false,
                     success: function(data){
-                    $(".form-response").html(data);
-                    let imgDiv = $('<div/>'); //Equivalent: $(document.createElement('img'))
-                    imgDiv.attr('class', "gallery-item");
-                    let img = $('<img>'); //Equivalent: $(document.createElement('img'))
-                    img.attr('src', data);
-                    img.appendTo(imgDiv);
-                    imgDiv.appendTo("div#gallery");
-                },
-                error: function(data){
-                    $(".form-response").html(data);
-                } 	        
+                        alert(data);
+                        let imgDiv = $('<div/>'); //Equivalent: $(document.createElement('img'))
+                        imgDiv.attr('class', "gallery-item");
+                        let img = $('<img>'); 
+                        img.attr('src', data);
+                        img.appendTo(imgDiv);
+                        imgDiv.appendTo("div#gallery");
+                        $("#uploadForm").trigger("reset");
+                    },
+
+                    error: function(data){
+                        alert("Inside ajax error");
+                        //$(".form-response").html(data);
+                        $("#uploadForm").trigger("reset");
+                    } 	        
                 });
             }));
         });
