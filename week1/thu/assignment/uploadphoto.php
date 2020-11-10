@@ -5,8 +5,6 @@
         $errorMsg = '';
         $validMimeTypes = ['image/png', 'image/jpeg', 'img/jpg', 'image/gif'];
         
-        //var_dump($_FILES["imagefile"]);
-        
         $name = $_FILES["imagefile"]['name']; 
         $type = $_FILES["imagefile"]['type'];
 
