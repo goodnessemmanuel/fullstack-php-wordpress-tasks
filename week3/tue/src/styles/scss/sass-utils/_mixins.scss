@@ -39,10 +39,38 @@
 
 // Transitions - Usage: @include transition(all .2s ease);
 @mixin transition($args...) {
-	transition: $args;
+  -webkit-transition: $args;
+       -o-transition: $args;
+	        transition: $args;
 }
 
+@mixin transition-transform($args...) {
+  -webkit-transition: -webkit-transform $args;
+     -moz-transition: -moz-transform $args;
+       -o-transition: -o-transform $args;
+          transition: transform $args;
+}
 
+// Transformations
+@mixin translate($x, $y) {
+  -webkit-transform: translate($x, $y);
+      -ms-transform: translate($x, $y); // IE9 only
+       -o-transform: translate($x, $y);
+          transform: translate($x, $y);
+}
+
+// Drop shadows
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow; // iOS <4.3 & Android <4.1
+          box-shadow: $shadow;
+}
+
+// Box sizing
+@mixin box-sizing($boxmodel) {
+  -webkit-box-sizing: $boxmodel;
+     -moz-box-sizing: $boxmodel;
+          box-sizing: $boxmodel;
+}
 // Retina Background Images - Usage: @include background-image-retina(logo, png);
 @mixin background-image-retina($file, $type) {
     background-image: url($file + '.' + $type);
