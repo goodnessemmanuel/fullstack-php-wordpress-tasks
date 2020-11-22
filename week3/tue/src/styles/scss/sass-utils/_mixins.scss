@@ -59,6 +59,14 @@
           transform: translate($x, $y);
 }
 
+// Transformations
+@mixin scale($ratio...) {
+  -webkit-transform: scale($ratio);
+      -ms-transform: scale($ratio); // IE9 only
+       -o-transform: scale($ratio);
+          transform: scale($ratio);
+}
+
 // Drop shadows
 @mixin box-shadow($shadow...) {
   -webkit-box-shadow: $shadow; // iOS <4.3 & Android <4.1
@@ -70,6 +78,11 @@
   -webkit-box-sizing: $boxmodel;
      -moz-box-sizing: $boxmodel;
           box-sizing: $boxmodel;
+}
+// Filter rendering
+@mixin filter($blurvalue) {
+  -webkit-filter: $blurvalue;
+    filter: $blurvalue;
 }
 // Retina Background Images - Usage: @include background-image-retina(logo, png);
 @mixin background-image-retina($file, $type) {

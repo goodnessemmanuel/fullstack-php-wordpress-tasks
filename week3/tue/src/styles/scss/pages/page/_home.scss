@@ -1,3 +1,19 @@
+
+.page-wrapper{
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+  @include transition-transform(0.4s ease);
+  .modal--background &::before{
+    @extend .modal--backend;
+     content: "";
+  }
+
+  .modal--background &.blur-on-dialogOpen {
+    @include opacity(0.95);
+    @include filter(blur(0.1rem));
+  }
+}
 .dashboard-sidebar {
   @extend .d-flex;
   @extend .flex-column;
@@ -5,7 +21,6 @@
   display: block;
   background-color: $primary;
   max-width: 3.75rem;
-  height: 100%;
   flex: 1;
 }
 .dashboard--authors {

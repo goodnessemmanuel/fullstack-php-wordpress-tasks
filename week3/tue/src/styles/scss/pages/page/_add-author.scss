@@ -10,11 +10,12 @@
     height: 5rem;
     margin-left: 0;
     margin-right: auto;
+    margin-bottom: 2.5rem;
 }
 
 .add--author .form-group{
     @extend .form-group;
-    margin: 2rem auto;
+    margin: 1rem auto;
 }
 
 .add--author .form-control{
