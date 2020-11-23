@@ -4,8 +4,7 @@ define('__INCLUDED__', true);
 
 /** PATH */
 define('APP_PATH', __DIR__);
-define('APP_MODEL_PATH', __DIR__ . '/model/');
-define('APP_SERVICE_PATH', __DIR__ . '/service/');
+define('APP_INCLUDE_PATH', __DIR__ . '/includes/');
 
 /**
  * Database config
@@ -20,5 +19,7 @@ define('DB_NAME', 'decagon');
  */
 define('APP_SECRET_KEY', 'sk_test_092414cb55d96ae3eb00bd39f93505fecbb56893');
 
-require APP_MODEL_PATH . "/Customer.php";
-require APP_SERVICE_PATH . "/CustomerService.php";
+require APP_INCLUDE_PATH . "model/Customer.php";
+require APP_INCLUDE_PATH . "service/CustomerService.php";
+require APP_INCLUDE_PATH . "service/PayStack.php";
+require APP_INCLUDE_PATH . "exception/ApiRequestException.php";

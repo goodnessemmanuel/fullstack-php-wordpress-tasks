@@ -1,13 +1,16 @@
-
+<?php
 /**
  * call this to create a Customer 
- */<?php
+ */
+
 class Customer {
-    protected $id;
-    protected $first_name;
-    protected $last_name;
-    protected $email;
-    protected $phone;
+    public $id;
+    public $first_name;
+    public $last_name;
+    public $email;
+    public $phone;
+    public $createdAt;
+    public $updatedAt;
 
     public function __construct(int $id, string $first_name, string $last_name, string $email, string $phone){
         $this->id = $id;
@@ -114,4 +117,37 @@ class Customer {
         return $this;
     }
 
+
+    /**
+     * Get the value of createdAt
+     */ 
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * Set the value of createdAt
+     */ 
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
+    }
+
+    /**
+     * Get the value of updatedAt
+     */ 
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
+    }
+
+    /**
+     * Set the value of updatedAt
+     *
+     */ 
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+    }
 }
