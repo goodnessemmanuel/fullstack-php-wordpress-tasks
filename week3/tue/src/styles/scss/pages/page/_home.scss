@@ -18,11 +18,19 @@
   @extend .d-flex;
   @extend .flex-column;
   @extend .align-items-center;
-  display: block;
   background-color: $primary;
   max-width: 3.75rem;
   flex: 1;
 }
+
+.dashboard-sidebar .signout{
+  @extend .d-flex;
+  @extend .flex-column;
+  @extend .align-items-center;
+  margin-bottom: 2rem;
+  margin-top: auto;
+}
+
 .dashboard--authors {
   flex: 1;
   @extend .d-flex;
@@ -123,4 +131,44 @@
   }
   .hide-bottom{
       border-bottom: none;
+  }
+
+  .table--container--footer{
+    @extend .d-flex;
+    @extend .justify-content-end;
+    @extend .align-items-center;
+    flex: 1;
+    background:inherit;
+    margin: 1.2rem 0; 
+  } 
+
+  .footer--item{
+    @include border-radius($border-radius-base);
+    @extend .d-flex;
+    @extend .justify-content-center;
+    @extend .align-items-center;
+    background: $white;
+    margin: auto 0.4rem;
+    width: 3.8rem;
+    height: 3.8rem;
+    outline: none;
+    &:last-child{
+      margin-right: 0;
+    }
+    p{
+      @extend .fw-400;
+    }
+    &:hover{
+      border: 2px solid $blue;
+      &:first-child, &:last-child{
+        @include border-radius(40%);
+      }
+    }
+  }
+
+  .footer--item.active{
+      background: $primary;
+      p{
+        color: $white;
+      }
   }
