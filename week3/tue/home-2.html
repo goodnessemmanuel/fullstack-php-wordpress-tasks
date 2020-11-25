@@ -45,13 +45,36 @@
                 <div class="avatar"></div>
             </div>
             <div class="table--container">
-                <div class="table--container--header">
-                    <h2 class="tabel-title">
-                        Authors
-                    </h2>
-                    <button class="btn btn-table" id="add-author">Add Author</button>
+                <div class="breadcrumb">
+                    <a href="#">
+                        <span><img src="assets/images/back.svg" alt=""> Go back</span>
+                    </a>
                 </div>
-
+                <div class="table--container--header">
+                    <h2 class="table-title">
+                        Jenny Wilson
+                    </h2>
+                </div>
+                <h4>Jenny Wilson' Post</h4>
+                <div class="table--search--filter">
+                    <div class="table--search">
+                        <form>
+                            <input class="form-control" type="search" placeholder="Search for posts"/>
+                            <button class="search-button"><img src="assets/images/search-symbol.svg" alt=""> </button>
+                        </form>
+                    </div>
+                    <div class="table--filter">
+                        <p>Filter By:</p>
+                        <div class="filter">
+                            <select>
+                                <option>Select filter</option>
+                                <option class="form-control">Date Posted</option>
+                                <option>Number of Views</option>
+                                <option>Number of Shares</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
                 <div class="table--head">
                     <span > 
                         Author’s Details
@@ -231,10 +254,7 @@
                 <div class="modal-body">
                     <form class="add--author">
                         <div class="add--author--image">
-                            <span> Image</span>
-                            <span class="icon--camera">
-                                <img src="assets/images/icon-camera-for-button.svg" alt="">
-                            </span>
+                         <span> Image</span>
                         </div>
                         <div class="form-group">
                           <label>Full Name</label>

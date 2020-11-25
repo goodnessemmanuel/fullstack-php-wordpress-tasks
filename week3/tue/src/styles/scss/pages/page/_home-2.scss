@@ -1,0 +1,57 @@
+.table--search--filter{
+    @extend .d-flex;
+    @extend .justify-content-between;
+    flex: 1;
+    @media screen and (max-width: $desktopmq){
+        flex-direction: column;                                                                                                          
+    }
+}
+
+.table--search{
+    @extend .d-flex;
+    @extend .align-content-center;
+    flex: 1;
+    form{
+        flex: 1;
+        position: relative;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .form-control{
+        @extend .search--area;
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.table--filter{
+    @extend .d-flex;
+    @extend .justify-content-end;
+    @extend .align-items-center;
+    padding-right: 1rem;
+    flex: 1;
+    p{
+        @extend .fw-600;
+        margin-right: 1.2rem;
+    }
+    .filter{
+        @extend .search--area;
+        padding: 0;
+       .form-control{
+            border-bottom: 1px solid $line;
+            background: red;
+            color: red;
+        }
+    }
+
+    @media screen and (max-width: $desktopmq){
+        justify-content: flex-start !important;
+        padding: 0; 
+        .filter{
+            flex: 1;
+        }                                                                                                   
+    }
+}
+
