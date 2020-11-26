@@ -16,7 +16,11 @@
     }
 }
 
-
+@mixin center {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
 // Background Cover - Usage: @include background-cover;
 @mixin background-cover {
     background-size: cover;

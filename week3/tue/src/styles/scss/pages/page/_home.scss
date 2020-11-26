@@ -1,5 +1,6 @@
 
 .page-wrapper{
+  @extend .d-flex;
   width: 100%;
   height: 100%;
   background-color: $white;
@@ -18,9 +19,12 @@
   @extend .d-flex;
   @extend .flex-column;
   @extend .align-items-center;
-  background-color: $primary;
+  position: fixed;
   max-width: 3.75rem;
-  flex: 1;
+  height: 100%;
+  background-color: $primary;
+  padding: 0 1rem;
+  margin: 0;
 }
 
 .dashboard-sidebar .signout{
@@ -31,10 +35,11 @@
   margin-top: auto;
 }
 
-.dashboard--authors {
+.dashboard--container--area {
   flex: 1;
   @extend .d-flex;
   @extend .flex-column;
+  margin-left: 3rem;
 }
 .logo-white {
   @extend .signin--logo;
@@ -55,7 +60,7 @@
 .avatar{
   height: 2.75rem;
   width: 2.75rem;
-  background-color: red;
+  background-color: transparent;
   border-radius: 50%;
 }
 .searchbar{
@@ -70,7 +75,7 @@
 }
 
 .searchbar--author .search--area, .search--area {
-  @include box-sizing(border-box) ;
+  @include box-sizing(border-box);
   background: $white;
   border: 1px solid rgba(76, 141, 235, 0.186481);
   border-radius: $border-radius-base;
@@ -94,10 +99,11 @@
   left: 0;
 }
 
-.table--container{
+.table--container, .dashboard--container{
+    margin: 0;
     background-color: $lightpurple;
     flex: 1;
-    padding: 0 1.1rem;
+    padding: 0 1.5rem;
     h2, h4{
       @extend .fw-600;
       color: $black;
@@ -126,11 +132,12 @@
   }
 }
 
-.table--container--header{
+.table--container--header, .dashboard--container--header{
     @extend .d-flex;
     @extend .align-items-center;
     @extend .justify-content-between;
 }
+
 .btn-table{
    border-radius: 0.25rem; 
    padding-left: 2rem;

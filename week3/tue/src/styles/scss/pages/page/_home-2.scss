@@ -20,9 +20,12 @@
 
     .form-control{
         @extend .search--area;
-        max-width: 100%;
+        max-width: 70%;
         width: 100%;
         margin: 0;
+        @media screen and (max-width: $desktopmq){
+            max-width: 100%;                                                                                                          
+        }
     }
 }
 
@@ -31,27 +34,28 @@
     @extend .justify-content-end;
     @extend .align-items-center;
     padding-right: 1rem;
-    flex: 1;
+
     p{
         @extend .fw-600;
         margin-right: 1.2rem;
     }
+
     .filter{
         @extend .search--area;
         padding: 0;
-       .form-control{
-            border-bottom: 1px solid $line;
-            background: red;
-            color: red;
+        width: 13.25rem;
+        .form-control{
+            @include box-sizing(border-box);
+            background: $white;
+            color: $darkgrey;
+            font-weight: lighter;
+            padding-top: .7rem;
+            padding-left: 2rem;
         }
     }
 
     @media screen and (max-width: $desktopmq){
         justify-content: flex-start !important;
-        padding: 0; 
-        .filter{
-            flex: 1;
-        }                                                                                                   
+        padding: 0;                                                                                        
     }
 }
-

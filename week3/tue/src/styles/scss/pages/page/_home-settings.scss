@@ -1,0 +1,101 @@
+.dashboard--content{
+    @extend .d-flex;
+    @media screen and (max-width: $desktopmq){
+        flex-direction: column;
+    }
+}
+.dashboard--content--left{
+    max-width: 25rem;
+    margin: 0;
+    margin-right: 10rem;
+    padding: 0;
+    @media screen and (max-width: $desktopmq){
+        margin-bottom: 2.5rem;
+        margin-right: 5rem;
+    }
+    @media only screen and (min-width: $desktopmq) and (max-width: $lgdesktopmq){
+        margin-right: 4rem;
+    }
+}
+.dashboard--content--left .menu{
+    @include center();
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+.menu ul{
+    @extend .d-flex;;
+    flex-direction: column;
+    margin: 0;
+    margin-right: auto;
+}
+.menu ul li{
+    @extend .d-flex;
+    padding: 0;
+    margin: 1rem 0;
+    a{
+        position: relative;
+        @extend .d-flex;
+        align-items: center;
+        color: $secondary;
+        padding: 0.5rem;
+        padding-left: 0;
+        span:first-child{
+            @extend .d-flex;
+            @extend .justify-content-center;
+            @extend .align-items-center;
+            position: absolute;
+            width: 2rem;
+            height: 2rem;
+            border-radius: $border-radius-base;
+            background: $line;
+            margin-top: auto;
+            margin-bottom: auto;
+            @media screen and (max-width: 600px){
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+            img{
+                width: 1.5rem;
+                height: 1.5rem;
+                @media screen and (max-width: $tabletmq){
+                    width: 1rem;
+                    height: 1rem;
+                }
+            }
+        }
+        span:last-child{
+            margin-left: 3rem;
+            font-size: $fs-5-desktop;
+            @media screen and (max-width: $tabletmq){
+                font-size: $fs-6-desktop;
+                margin-left: 2rem;
+            }
+
+        }
+    } 
+    &.active a>span{
+        @extend .fw-600;
+    }
+    &:first-child{
+        margin-top: 0;
+    }
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+
+.dashboard--content--right{
+    background: $white;
+}
+
+.dashboard--content--header{
+    border-bottom: 1px solid $line;
+    padding: 3rem;
+    @media screen and (max-width: $desktopmq){
+        padding-left: 0;
+    }
+}
+.dashboard--content--body{
+    padding: 3rem;
+}

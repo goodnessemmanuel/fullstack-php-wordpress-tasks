@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="assets/styles/scss/main.min.css" />
 </head>
 <body>
-    <div class="page-wrapper blur-on-dialogOpen d-flex">
+    <div class="page-wrapper d-flex">
         <div class="dashboard-sidebar">
             <div class="menu">
                 <span class="logo-white">
@@ -14,40 +14,42 @@
                 </span>
                 <span class="menu-item">
                     <a href="/">
-                        <img src="assets/images/home.svg" alt="">
+                        <img src="assets/images/svgs/home.svg" alt="">
                     </a>
                 </span>
                 <span class="menu-item">
                     <a href="/">
-                        <img src="assets/images/group.svg" alt="">
+                        <img src="assets/images/svgs/group.svg" alt="">
                     </a>
                 </span>
                 <span class="menu-item">
                     <a href="/">
-                        <img src="assets/images/settings.svg" alt="">
+                        <img src="assets/images/svgs/settings.svg" alt="">
                     </a>
                 </span>
             </div>
             <div class="signout">
                 <span class="menu-item">
                     <a href="/">
-                        <img src="assets/images/logout.svg" alt="">
+                        <img src="assets/images/svgs/logout.svg" alt="">
                     </a>
                 </span>
             </div>
         </div>
-        <div class="dashboard--authors">
+        <div class=".dashboard--container--area">
             <div class="searchbar">
                 <div class="searchbar--author">
                     <input type="text" class="search--area" placeholder="Search for author">
-                    <button class="search-button"><img src="assets/images/search-symbol.svg" alt=""> </button>
+                    <button class="search-button"><img src="assets/images/svgs/search-symbol.svg" alt=""> </button>
                 </div>
-                <div class="avatar"></div>
+                <div class="avatar">
+                    <img src="assets/images/svgs/oval.svg" alt="">
+                </div>
             </div>
             <div class="table--container">
                 <div class="breadcrumb">
                     <a href="#">
-                        <span><img src="assets/images/back.svg" alt=""> Go back</span>
+                        <span><img src="assets/images/svgs/back.svg" alt=""> Go back</span>
                     </a>
                 </div>
                 <div class="table--container--header">
@@ -60,18 +62,18 @@
                     <div class="table--search">
                         <form>
                             <input class="form-control" type="search" placeholder="Search for posts"/>
-                            <button class="search-button"><img src="assets/images/search-symbol.svg" alt=""> </button>
+                            <button class="search-button"><img src="assets/images/svgs/search-symbol.svg" alt=""> </button>
                         </form>
                     </div>
                     <div class="table--filter">
                         <p>Filter By:</p>
                         <div class="filter">
-                            <select>
-                                <option>Select filter</option>
+                            <select class="form-control right">
+                                <option data-display="Select filter">Select filter</option>
                                 <option class="form-control">Date Posted</option>
                                 <option>Number of Views</option>
                                 <option>Number of Shares</option>
-                            </select>
+                            </select> 
                         </div>
                     </div>
                 </div>
@@ -211,7 +213,7 @@
                 <div class="table--container--footer">
                     <span class="footer--item">
                         <a href="/">
-                            <img src="assets/images/previous.svg" alt="">
+                            <img src="assets/images/svgs/previous.svg" alt="">
                         </a>
                     </span>
                     <span class="footer--item">
@@ -228,12 +230,12 @@
                     </span>
                     <span class="footer--item">
                         <a href="/">
-                            <img src="assets/images/ellipsis.svg" alt="">
+                            <img src="assets/images/svgs/ellipsis.svg" alt="">
                         </a>
                     </span>
-                    <span class="footer--item">
+                    <span class="footer--item"> 
                         <a href="/">
-                            <img src="assets/images/next.svg" alt="">
+                            <img src="assets/images/svgs/next.svg" alt="">
                         </a>
                     </span>
                 </div>
@@ -269,21 +271,18 @@
                           <input type="tel" name="email" class="form-control" placeholder="Phone number">
                         </div>
                         <input type="submit" value="Add Author" class="btn btn-primary sign-btn">
-                      </form>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
     
   <script src="./assets/js/jquery-3.3.1.min.js"></script>
+  <script src="./assets/js/jquery.nice-select.min.js"></script>
   <script>
-    $(document).ready(function() {
-        //function open add modal dialog
-        $("body").on("click", "#add-author, .close", function() {
-            $("body").toggleClass("modal--background");
-        });
-    });
-    
-</script>
+      $(document).ready(function() {
+        $('select').niceSelect();
+      });
+    </script>
 </body>
 </html>

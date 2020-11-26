@@ -1,6 +1,7 @@
 ///mixins
 @import "sass-utils/mixins";
 
+
 // Color utiities
 @import "base/color";
 
@@ -16,6 +17,9 @@
 // COMPONENTS
 @import "components/components";
 
+//nice select
+@import "sass-utils/nice-select";
 
 // Pages
 @import "pages/pages";
+
