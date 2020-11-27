@@ -1,9 +1,9 @@
-.add--author{
+.author-form{
     @extend .my-form;
     padding: 0;
 }
 
-.add--author--image{
+.author-profile-image{
     position: relative;
     @extend .author--image;
     @extend .signin--logo;
@@ -11,7 +11,7 @@
     height: 5rem;
     margin-left: 0;
     margin-right: auto;
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
     background: red;
     .icon--camera{
         position: absolute;
@@ -32,12 +32,12 @@
     }
 }
 
-.add--author .form-group{
+.author-form .form-group{
     @extend .form-group;
     margin: 1rem auto;
 }
 
-.add--author .form-control{
+.author-form .form-control{
     @extend .form-control;
     max-width: 100%;
     background: $form-input-bg-color;

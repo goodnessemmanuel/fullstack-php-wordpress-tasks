@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="assets/styles/scss/main.min.css" />
 </head>
 <body>
-    <div class="page-wrapper d-flex">
+    <div class="page-wrapper blur-on-dialogOpen d-flex">
         <div class="dashboard-sidebar">
             <div class="menu">
                 <span class="logo-white">
@@ -54,7 +54,7 @@
                     <div class="dashboard--content--left">
                         <div class="menu">
                             <ul>
-                               <li class="active">
+                               <li>
                                    <a href="/">
                                         <span><img src="assets/images/svgs/user.svg" alt=""></span>
                                         <span class="menu-text">Profile Settings</span> 
@@ -69,10 +69,10 @@
                                <li>
                                    <a href="/">
                                         <span><img src="assets/images/svgs/icon-weburl.svg" alt=""></span>
-                                        <span class="menu-text">Connect Website</span> 
+                                        <span class="menu-text">Connect Website(s)</span> 
                                     </a>
                                </li> 
-                               <li>
+                               <li class="active">
                                    <a href="/">
                                         <span><img src="assets/images/svgs/icon-token.svg" alt=""></span>
                                         <span class="menu-text">Get Token</span> 
@@ -83,47 +83,18 @@
                     </div>
                     <div class="dashboard--content--right">
                         <div class="dashboard--content--header">
-                            <h2>Profile Settings</h2>
-                            <p>Edit basic information about you</p>
+                            <h2>Get Token</h2>
+                            <p>Add Token to begin tracking</p>
                         </div>
                         <div class="dashboard--content--body">
-                            <form class="author-form">
-                                <div class="author-profile-image">
-                                    <span><img src="assets/images/svgs/modal-author.svg" alt=""></span>
-                                    <span class="icon--camera">
-                                        <img src="assets/images/svgs/icon-camera-for-button.svg" alt="">
-                                    </span>
-                                </div>
-                                <div class="form--row">
-                                    <div class="form--item">
-                                        <label>Enter your First Name</label>
-                                        <input type="text" name="firstname" class="form-control" placeholder="First name">
-                                    </div>
-                                    <div class="form--item">
-                                        <label>Enter your Last Name</label>
-                                        <input type="text" name="lastname" class="form-control" placeholder="Last name">
-                                    </div>
-                                </div>
-                                <div class="form--row">
-                                    <div class="form--item">
-                                        <label>Email Address</label>
-                                        <input type="text" name="email" class="form-control" placeholder="name@mail.com">
-                                    </div>
-                                    <div class="form--item">
-                                        <label>Phone Number</label>
-                                        <input type="text" name="email" class="form-control" placeholder="09098765331">
-                                    </div>
-                                </div>
-                                <div class="button-group">
-                                    <div class="button-cancel">
-                                       <input type="submit" value="Cancel" class="btn btn-primary">
-                                    </div>
-                                    <div class="button-save">
-                                       <input type="submit" value="Save Changes" class="btn btn-primary">
-                                    </div>
-                                </div>
-                            </form>
+                            
+                            <p>Copy this code and paste it on the header section of your website</p>
+                            <div class="token-row">
+                                <input class="token--text" type="text" value="WExZa@xYSA&hdydi@gdgd$$$$£3shgkk@¢##" readonly >
+                                <button class="button-copy">Copy</button>
+                            </div>
                         </div>
+                    </div> 
                     </div>
                 </div>
             </div>

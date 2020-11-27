@@ -1,0 +1,69 @@
+h3{
+    @extend .fw-600;
+    color: $secondary;
+}
+
+.dashboard--main--content{
+    @extend .d-flex;
+    padding: 0;
+    margin: 0;
+    background-color:transparent;
+    @media screen and (max-width: $desktopmq) {
+        flex-direction: column;
+    }
+}
+
+.main--content--left{
+    @extend .d-flex;
+    flex-direction: column;
+    //background: blue;
+}
+.content--left--top{
+    margin-bottom: 2rem;
+    @media screen and (max-width: $desktopmq) {
+        margin-bottom: 0;
+    }
+}
+.content--left--bottom{
+    @extend .d-flex;
+    @media screen and (max-width: $desktopmq) {
+        flex-direction: column;
+    }
+}
+.top-author, .sharing-chanel, 
+.top-share-authors, .top-posts{
+    padding-left: 1rem;
+    background: $white;
+    margin-right: 2rem;
+    @media screen and (max-width: $desktopmq) {
+        display: block;
+        margin-bottom: 2rem;
+    }
+    
+}
+.top-share-authors{
+    flex: 1;
+    
+}
+
+.top-posts{
+    flex: 2;
+    
+}
+.share-author-row{
+    @extend .website-row;
+
+    &>span:last-child{
+        text-transform: capitalize;
+        @extend .fw-300;
+        margin-left: 2rem;
+    }
+}
+.main--content--right{
+    padding-left: 1rem;
+    background: $white;
+}
+
+.table--container--header{
+    padding-right: 1.3rem;
+}

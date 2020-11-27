@@ -1,15 +1,19 @@
 //// SignIn
 @import "pages/page/signin";
 
-//Dashboard index
+
+//Dashboard author index
 @import "pages/page/home";
 
 //Add Author Modal
 @import "pages/page/add-author";
 
 //Dashboard posts
-@import "pages/page/home-2";
+@import "pages/page/home-filter-search";
 
 //Dashboard Settings
 @import "pages/page/home-settings";
+
+//Dashboard landing
+@import "pages/page/home-dashboard";
 

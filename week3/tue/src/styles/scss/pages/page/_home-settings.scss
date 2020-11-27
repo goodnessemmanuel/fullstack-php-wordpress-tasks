@@ -5,16 +5,15 @@
     }
 }
 .dashboard--content--left{
-    max-width: 25rem;
     margin: 0;
-    margin-right: 10rem;
     padding: 0;
+    margin-right: 10rem;
     @media screen and (max-width: $desktopmq){
         margin-bottom: 2.5rem;
-        margin-right: 5rem;
+        margin-right: 3rem;
     }
     @media only screen and (min-width: $desktopmq) and (max-width: $lgdesktopmq){
-        margin-right: 4rem;
+        margin-right: 2rem;
     }
 }
 .dashboard--content--left .menu{
@@ -87,6 +86,7 @@
 
 .dashboard--content--right{
     background: $white;
+    flex: 1;
 }
 
 .dashboard--content--header{
@@ -98,4 +98,128 @@
 }
 .dashboard--content--body{
     padding: 3rem;
+    p{
+        @extend .fw-400;
+        color: $secondary;
+    }
+}
+
+.form--row{
+    @extend .d-flex;
+    max-width: 100%;
+    margin-bottom: 2rem;
+    @media screen and (max-width: $desktopmq){
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+}
+
+.form--item{
+    flex: 1;
+    &:first-child{
+        margin-right: 1rem;
+    }
+    &:last-child{
+        margin-left: 1rem;
+    }
+
+    @media only screen and (min-width: $desktopmq){    
+       &.current-password{
+            margin: 0;
+            max-width: 48%;
+       }
+    }
+
+    @media screen and (max-width: $desktopmq){
+        &:first-child, &:last-child{
+            margin: 0;
+        }
+       & .form-control{
+            margin-bottom: 1.3rem;
+       }
+    }
+
+}
+.button-group{
+    @extend .d-flex;
+    @extend .justify-content-end;
+    @media screen and (max-width: $desktopmq){
+        flex-direction: column;
+        & .button-cancel{
+            margin-bottom: 1.3rem;
+        }
+    }
+}
+.button-cancel input[type="submit"]{
+    background: $white;
+    color: $secondary;
+}
+.button-cancel, .button-save{
+    @extend .sign-btn;
+    & input{
+        width: 100%;
+        border-radius: $border-radius-small;
+    }
+    @media screen and (min-width: $desktopmq){
+        max-width: 18rem;
+        & + .button-save{
+            margin-left: 2rem;
+        }
+    }
+}
+
+.website-row{
+    @extend .table-row;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    & >span:last-child{
+        text-transform: uppercase;
+        @extend .fw-600;
+    }
+}
+.website--index{
+    @extend .author--index;
+}
+
+.token-row{
+    position: relative;
+    .token--text{
+        @extend .form-control;
+        @extend .fw-400;
+        color: $secondary;
+        text-transform: uppercase;
+        max-width: 100%;
+        background: $lightbluefill;
+        border: 1px solid $lightbluefill;
+        height: 4.4rem;
+        padding-right: 10rem;
+        @media screen and (max-width: $desktopmq){
+            padding-right: 7.5rem;
+        }
+        @media screen and (max-width: $tabletmq){
+            adding-right: 5.5rem;
+        }
+    }
+    .button-copy{
+        @extend .d-flex;
+        @extend .justify-content-center;
+        @extend .align-items-center;
+        @extend .fw-600;
+        border-radius: $border-radius-base;
+        width: 8rem;
+        height: 3rem;
+        margin: 0;
+        position: absolute;
+        right: 1rem;
+        left: auto;
+        @include translate(0, -120%);
+
+        @media screen and (max-width: $desktopmq){
+            width: 6rem;
+        }
+        @media screen and (max-width: $tabletmq){
+            width: 4rem;
+        }
+
+    }
 }
