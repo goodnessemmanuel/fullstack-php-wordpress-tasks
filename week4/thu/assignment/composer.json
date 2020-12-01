@@ -1,0 +1,19 @@
+{
+    "name": "goodnessemmanuel/assignment",
+    "description": "Assignment WPAnalytics",
+    "authors": [
+        {
+            "name": "Oche Ejeh",
+            "email": "goodnessemmanuel@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload":{
+        "psr-4":{
+            "Base\\": "base/"
+        },
+        "files": [
+            "./settings/settings.php"
+        ]
+    }
+}
